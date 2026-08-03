@@ -1,0 +1,221 @@
+/* Oxford Liturgists' Group — Stylesheet */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* Reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --burgundy: #1b2a4a;
+  --burgundy-dark: #0f1a30;
+  --gold: #9aadbe;
+  --gold-light: #c0ced9;
+  --cream: #f4f6f8;
+  --cream-dark: #e2e7ec;
+  --text: #1a1e24;
+  --text-light: #4a5568;
+  --white: #ffffff;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Crimson Text', Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text);
+  background-color: var(--cream);
+}
+
+/* ---- HEADER ---- */
+header {
+  background-color: var(--burgundy);
+  color: var(--cream);
+  text-align: center;
+  padding: 2rem 1rem 1.5rem;
+  border-bottom: 4px solid var(--gold);
+}
+
+header .logo {
+  width: 180px;
+  height: auto;
+  margin-bottom: 0.8rem;
+}
+
+header h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.25rem;
+}
+
+header .subtitle {
+  font-family: 'Crimson Text', Georgia, serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--gold-light);
+}
+
+/* ---- NAVIGATION ---- */
+nav {
+  background-color: var(--burgundy-dark);
+  text-align: center;
+  padding: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav li { margin: 0; }
+
+nav a {
+  display: block;
+  color: var(--cream);
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: var(--gold);
+  color: var(--burgundy-dark);
+}
+
+/* ---- MAIN CONTENT ---- */
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.7rem;
+  color: var(--burgundy);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 0.4rem;
+}
+
+h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  color: var(--burgundy);
+  margin-top: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+p { margin-bottom: 1rem; }
+
+a { color: var(--burgundy); }
+a:hover { color: var(--gold); }
+
+/* ---- EVENT CARDS ---- */
+.event-card {
+  background: var(--white);
+  border: 1px solid var(--cream-dark);
+  border-left: 4px solid var(--gold);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 2px;
+}
+
+.event-card .event-date {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+}
+
+.event-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+}
+
+.event-card .event-speaker {
+  font-style: italic;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.event-card .event-type {
+  display: inline-block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: var(--burgundy);
+  color: var(--cream);
+  padding: 0.15rem 0.6rem;
+  border-radius: 2px;
+  margin-bottom: 0.6rem;
+}
+
+.event-card p:last-child { margin-bottom: 0; }
+
+/* ---- BOOKING / FORM ---- */
+.booking-section {
+  background: var(--white);
+  border: 1px solid var(--cream-dark);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 2px;
+}
+
+.booking-section h3 {
+  margin-top: 0;
+}
+
+.form-placeholder {
+  background: var(--cream-dark);
+  border: 2px dashed var(--gold);
+  padding: 3rem 2rem;
+  text-align: center;
+  color: var(--text-light);
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+/* ---- CONTACT INFO ---- */
+.contact-block {
+  background: var(--white);
+  border: 1px solid var(--cream-dark);
+  border-left: 4px solid var(--gold);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ---- FOOTER ---- */
+footer {
+  background-color: var(--burgundy-dark);
+  color: var(--cream-dark);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.85rem;
+  border-top: 3px solid var(--gold);
+}
+
+footer a {
+  color: var(--gold-light);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 600px) {
+  header h1 { font-size: 1.6rem; }
+  nav a { padding: 0.6rem 1rem; font-size: 0.85rem; }
+  main { padding: 1.5rem 1rem 2rem; }
+  h2 { font-size: 1.4rem; }
+}
