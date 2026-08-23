@@ -166,6 +166,24 @@ a:hover { color: var(--gold); }
 
 .event-card p:last-child { margin-bottom: 0; }
 
+.event-card .speaker-photo {
+  float: right;
+  width: 100px;
+  height: auto;
+  margin: 0 0 1rem 1.5rem;
+  border-radius: 3px;
+  border: 2px solid var(--cream-dark);
+}
+
+@media (max-width: 600px) {
+  .event-card .speaker-photo {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem;
+    width: 80px;
+  }
+}
+
 /* ---- BOOKING / FORM ---- */
 .booking-section {
   background: var(--white);
